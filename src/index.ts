@@ -5,6 +5,7 @@ import figlet from "figlet";
 import { confirm, number, select } from "@inquirer/prompts";
 import chalk from "chalk";
 import { DIFF_LEVELS } from "./util/difficulty-levels";
+import { formatMilliseconds } from "./util/format-ms";
 
 const checkPlayAgain = async () => {
     return await confirm({ message: "Play again?", default: false });
@@ -48,7 +49,7 @@ const main = async () => {
 
         console.log(chalk.cyanBright("Let's start the game!"));
 
-        // fecha inicio y final para el tiempo
+        const startTime = Date.now();
 
         let attemps = 0;
         const numberToGuess = +(Math.random() * 100).toFixed(0) + 1; // número entre 0 y 100
@@ -93,7 +94,11 @@ const main = async () => {
         if (attemps >= chances) {
             console.log(chalk.redBright("You runned out of chances!"));
         }
+        const endTime = Date.now() - startTime;
 
+        console.log(
+            chalk.cyanBright(`You spent ${formatMilliseconds(endTime)}`)
+        );
         playAgain = await checkPlayAgain();
     }
 };
