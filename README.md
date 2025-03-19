@@ -108,8 +108,8 @@ guess-number-cli/
     └── util						# utilities
     │   ├── difficulty-levels.ts	# Difficulty levels and values
     │   └── format-ms.ts			# Format milliseconds into seconds or minutes
-├── tsconfig.json 					# TypeScript configuration
-├── README.md 						# Docs
+├── tsconfig.json					# TypeScript configuration
+├── README.md						# Docs
 └── yarn.lock
 ```
 
