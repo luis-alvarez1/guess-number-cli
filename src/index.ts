@@ -52,7 +52,7 @@ const main = async () => {
         const startTime = Date.now();
 
         let attemps = 0;
-        const numberToGuess = +(Math.random() * 100).toFixed(0) + 1; // número entre 0 y 100
+        const numberToGuess = +(Math.random() * 100).toFixed(0) + 1; // number between 1 and 100
 
         while (attemps < chances) {
             let userInput = await number({
