@@ -1,0 +1,32 @@
+{
+    "name": "guess-number",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "node index.js",
+        "build": "tsc",
+        "start:dev": "ts-node src/index.ts",
+        "test": "jest",
+        "test:dev": "jest --watch"
+    },
+    "keywords": [],
+    "author": "Luis Alvarez",
+    "license": "MIT",
+    "bin": {
+        "guess-number": "dist/index.js"
+    },
+    "dependencies": {
+        "@inquirer/prompts": "^7.4.0",
+        "chalk": "4.1.2",
+        "figlet": "^1.8.0",
+        "inquirer": "^12.5.0"
+    },
+    "devDependencies": {
+        "@types/figlet": "^1.7.0",
+        "@types/inquirer": "^9.0.7",
+        "@types/node": "^22.13.10",
+        "nodemon": "^3.1.9",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.2"
+    }
+}
